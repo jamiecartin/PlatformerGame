@@ -14,8 +14,9 @@ public class Player extends Entity {
     private BufferedImage[][] animations;
     private int aniTick, aniIndex, aniSpeed = 15;
     private int playerAction = IDLE;
-    private int playerDir = -1;
     private boolean moving = false;
+    private boolean left, up, right, down;
+    private float playerSpeed = 2.0f;
 
     public Player(float x, float y) {
         super(x, y);
@@ -23,22 +24,16 @@ public class Player extends Entity {
     }
 
     public void update() {
+
+        updatePos();
         updateAnimationTick();
         setAnimation();
-        updatePos();
     }
 
     public void render(Graphics g) {
         g.drawImage(animations[playerAction][aniIndex],(int)x, (int)y, 256, 160 ,null);
     }
-    public void setDirection(int direction) {
-        this.playerDir = direction;
-        moving = true;
-    }
 
-    public void setMoving(boolean moving) {
-        this.moving = moving;
-    }
     private void updateAnimationTick() {
         aniTick++;
         if (aniTick >= aniSpeed) {
@@ -58,23 +53,25 @@ public class Player extends Entity {
     }
 
     private void updatePos() {
-        if (moving) {
-            switch (playerDir) {
-                case LEFT:
-                    x -= 5;
-                    break;
-                case UP:
-                    y -= 5;
-                    break;
-                case RIGHT:
-                    x += 5;
-                    break;
-                case DOWN:
-                    y += 5;
-                    break;
-                }
-            }
+        moving = false;
+
+        if (left && !right) {
+            x -= playerSpeed;
+            moving = true;
+        } else if (right && !left) {
+            x += playerSpeed;
+            moving = true;
         }
+
+
+        if (up && !down) {
+            y -= playerSpeed;
+            moving = true;
+        } else if (down && !up) {
+            y += playerSpeed;
+            moving = true;
+        }
+    }
 
     private void loadAnimations() {
         InputStream is = getClass().getResourceAsStream("/player_sprites.png");
@@ -95,5 +92,44 @@ public class Player extends Entity {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void resetDirBooleans() {
+        left = false;
+        right = false;
+        up = false;
+        down = false;
+    }
+
+    public boolean isLeft() {
+        return left;
+    }
+
+    public void setLeft(boolean left) {
+        this.left = left;
+    }
+
+    public boolean isUp() {
+        return up;
+    }
+
+    public void setUp(boolean up) {
+        this.up = up;
+    }
+
+    public boolean isRight() {
+        return right;
+    }
+
+    public void setRight(boolean right) {
+        this.right = right;
+    }
+
+    public boolean isDown() {
+        return down;
+    }
+
+    public void setDown(boolean down) {
+        this.down = down;
     }
 }
