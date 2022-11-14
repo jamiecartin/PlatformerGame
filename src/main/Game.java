@@ -49,6 +49,7 @@ public class Game implements Runnable {
     public void render(Graphics g) {
         levelHandler.draw(g);
         player.render(g);
+
     }
 
     @Override
