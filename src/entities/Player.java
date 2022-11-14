@@ -11,6 +11,7 @@ import java.io.InputStream;
 import static utils.Constants.Directions.*;
 import static utils.Constants.Directions.DOWN;
 import static utils.Constants.PlayerConstants.*;
+import static utils.HelpMethods.*;
 
 public class Player extends Entity {
     private BufferedImage[][] animations;
@@ -19,6 +20,7 @@ public class Player extends Entity {
     private boolean moving = false, attacking = false;
     private boolean left, up, right, down;
     private float playerSpeed = 2.0f;
+    private int[][] lvlData;
 
     public Player(float x, float y, int width, int height) {
         super(x, y, width, height);
@@ -51,19 +53,16 @@ public class Player extends Entity {
     private void setAnimation() {
         int startAni = playerAction;
 
-        if (moving) {
+        if (moving)
             playerAction = RUNNING;
-        } else {
+        else
             playerAction = IDLE;
-        }
 
-        if(attacking) {
+        if(attacking)
             playerAction = ATTACK_1;
-        }
 
-        if (startAni != playerAction) {
+        if (startAni != playerAction)
             resetAniTick();
-        }
     }
 
     private void resetAniTick() {
@@ -73,21 +72,25 @@ public class Player extends Entity {
 
     private void updatePos() {
         moving = false;
+        if (!left && !right && !up && !down)
+            return;
 
-        if (left && !right) {
-            x -= playerSpeed;
-            moving = true;
-        } else if (right && !left) {
-            x += playerSpeed;
-            moving = true;
-        }
+        float xSpeed = 0, ySpeed = 0;
+
+        if (left && !right)
+            xSpeed = -playerSpeed;
+        else if (right && !left)
+            xSpeed = playerSpeed;
 
 
-        if (up && !down) {
-            y -= playerSpeed;
-            moving = true;
-        } else if (down && !up) {
-            y += playerSpeed;
+        if (up && !down)
+            ySpeed = -playerSpeed;
+        else if (down && !up)
+            ySpeed = playerSpeed;
+
+        if (CanMoveHere(x + xSpeed, y + ySpeed, width, height, lvlData)) {
+            this.x += xSpeed;
+            this.y += ySpeed;
             moving = true;
         }
     }
@@ -101,6 +104,11 @@ public class Player extends Entity {
                     animations[j][i] = img.getSubimage(i * 64, j * 40, 64, 40);
                 }
             }
+    }
+
+    public void loadLvlData(int[][] lvlData) {
+        this.lvlData = lvlData;
+
     }
 
     public void resetDirBooleans() {
