@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="hitbox fix">
+    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="gravity and jumping animation">
+      <change afterPath="$PROJECT_DIR$/src/gamestates/Gamestate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamestates/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gamestates/Statemethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/inputs/KeyboardInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/KeyboardInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/MouseInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668043833821</updated>
       <workItem from="1668043835621" duration="46237000" />
-      <workItem from="1668443746327" duration="6946000" />
+      <workItem from="1668443746327" duration="11808000" />
     </task>
     <task id="LOCAL-00001" summary="Initial game construction">
       <created>1668045193305</created>
@@ -164,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668400868350</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="gravity and jumping animation">
+      <created>1668477687506</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668477687507</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +210,7 @@
     <MESSAGE value="draw hitbox" />
     <MESSAGE value="collision detection" />
     <MESSAGE value="hitbox fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="hitbox fix" />
+    <MESSAGE value="gravity and jumping animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="gravity and jumping animation" />
   </component>
 </project>
