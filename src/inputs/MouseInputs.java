@@ -80,6 +80,5 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
             default:
                 break;
         }
-
     }
 }
