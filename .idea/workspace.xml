@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="Pause menu buttons functionality">
-      <change afterPath="$PROJECT_DIR$/src/ui/VolumeButton.java" afterDir="false" />
+    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="sliding volume button and bug fixes">
+      <change afterPath="$PROJECT_DIR$/res/background_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/level_one_data_long.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/MouseInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/PauseOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PauseOverlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/LevelHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/LevelHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HelpMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +73,7 @@
       <workItem from="1668043835621" duration="46237000" />
       <workItem from="1668443746327" duration="11842000" />
       <workItem from="1668563946004" duration="5604000" />
-      <workItem from="1668656355849" duration="15325000" />
+      <workItem from="1668656355849" duration="21144000" />
     </task>
     <task id="LOCAL-00001" summary="Initial game construction">
       <created>1668045193305</created>
@@ -206,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668718327115</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="sliding volume button and bug fixes">
+      <created>1668723245919</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1668723245920</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +252,7 @@
     <MESSAGE value="menu screen functionality" />
     <MESSAGE value="Pause menu and music buttons" />
     <MESSAGE value="Pause menu buttons functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pause menu buttons functionality" />
+    <MESSAGE value="sliding volume button and bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="sliding volume button and bug fixes" />
   </component>
 </project>
