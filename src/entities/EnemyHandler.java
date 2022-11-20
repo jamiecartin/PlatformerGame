@@ -24,9 +24,9 @@ public class EnemyHandler {
         crabbies = LoadSave.GetCrabs();
     }
 
-    public void update() {
+    public void update(int[][] lvlData) {
         for (Crabby c : crabbies)
-            c.update();
+            c.update(lvlData);
     }
 
     public void draw(Graphics g, int xLvlOffset) {
