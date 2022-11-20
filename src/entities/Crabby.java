@@ -10,53 +10,34 @@ import static utils.HelpMethods.*;
 public class Crabby extends Enemy {
     public Crabby(float x, float y) {
         super(x, y, CRABBY_WIDTH, CRABBY_HEIGHT, CRABBY);
-        initHitbox(x, y, (int)(22 * Game.SCALE), (int)(19 * Game.SCALE));
+        initHitbox(x, y, (int) (22 * Game.SCALE), (int) (19 * Game.SCALE));
     }
 
-    public void update(int[][] lvlData) {
-        updateMove(lvlData);
+    public void update(int[][] lvlData, Player player) {
+        updateMove(lvlData, player);
         updateAnimationTick();
     }
 
-    private void updateMove(int[][] lvlData) {
-        if (firstUpdate) {
-            if (!IsEntityOnFloor(hitbox, lvlData))
-                inAir = true;
-            firstUpdate = false;
-        }
+    private void updateMove(int[][] lvlData, Player player) {
+        if (firstUpdate)
+            firstUpdateCheck(lvlData);
 
-        if (inAir) {
-            if (CanMoveHere(hitbox.x, hitbox.y + fallSpeed, hitbox.width, hitbox.height, lvlData)) {
-                hitbox.y += fallSpeed;
-                fallSpeed += gravity;
-            } else {
-                inAir = false;
-                hitbox.y = GetEntityYPosUnderRoofOrAboveFloor(hitbox, fallSpeed);
-            }
-        } else {
-            switch (enemyState) {
-                case IDLE:
-                    enemyState = RUNNING;
-                    break;
-                case RUNNING:
-                    float xSpeed = 0;
+            if (inAir)
+                updateInAir(lvlData);
+            else {
+                switch (enemyState) {
+                    case IDLE:
+                        newState(RUNNING);
+                        break;
+                    case RUNNING:
+                        if (canSeePlayer(lvlData, player))
+                            turnTowardsPlayer(player);
+                        if (isPlayerCloseForAttack(player))
+                            newState(ATTACK);
 
-                    if (walkDir == LEFT)
-                        xSpeed = -walkSpeed;
-                    else
-                        xSpeed = walkSpeed;
-
-                    if (CanMoveHere(hitbox.x + xSpeed, hitbox.y, hitbox.width, hitbox.height, lvlData))
-                        if (IsFloor(hitbox, xSpeed, lvlData)) {
-                            hitbox.x += xSpeed;
-                            return;
-                        }
-
-                    changeWalkDir();
-
-                    break;
+                        move(lvlData);
+                        break;
+                }
             }
         }
-
     }
-}
