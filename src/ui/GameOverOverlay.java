@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class GameOverOverlay {
+
     private Playing playing;
 
     public GameOverOverlay(Playing playing) {
@@ -20,7 +21,7 @@ public class GameOverOverlay {
 
         g.setColor(Color.white);
         g.drawString("Game Over", Game.GAME_WIDTH / 2, 150);
-        g.drawString("Press backspace to enter Main Menu!", Game.GAME_WIDTH / 2, 300);
+        g.drawString("Press esc to enter Main Menu!", Game.GAME_WIDTH / 2, 300);
 
     }
 
