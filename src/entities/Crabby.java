@@ -42,34 +42,34 @@ public class Crabby extends Enemy {
         if (firstUpdate)
             firstUpdateCheck(lvlData);
 
-            if (inAir)
-                updateInAir(lvlData);
-            else {
-                switch (enemyState) {
-                    case IDLE:
-                        newState(RUNNING);
-                        break;
-                    case RUNNING:
-                        if (canSeePlayer(lvlData, player))
-                            turnTowardsPlayer(player);
+        if (inAir)
+            updateInAir(lvlData);
+        else {
+            switch (enemyState) {
+                case IDLE:
+                    newState(RUNNING);
+                    break;
+                case RUNNING:
+                    if (canSeePlayer(lvlData, player)) {
+                        turnTowardsPlayer(player);
                         if (isPlayerCloseForAttack(player))
                             newState(ATTACK);
+                    }
+                    move(lvlData);
+                    break;
+                case ATTACK:
+                    if (aniIndex == 0)
+                        attackChecked = false;
 
-                        move(lvlData);
-                        break;
-                    case ATTACK:
-                        if (aniIndex == 0)
-                            attackChecked = false;
+                    if (aniIndex == 3 && !attackChecked)
+                        checkEnemyHit(attackBox, player);
 
-                        if (aniIndex == 3 && !attackChecked)
-                            checkEnemyHit(attackBox, player);
-
-                        break;
-                    case HIT:
-                        break;
-                }
+                 break;
+                case HIT:
+                 break;
             }
         }
+    }
 
         public void drawAttackBox(Graphics g, int xLvlOffset) {
             g.setColor(Color.red);
