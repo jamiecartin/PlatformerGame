@@ -45,11 +45,7 @@ public class EnemyHandler {
             if (c.isActive()) {
                 g.drawImage(crabbyArr[c.getEnemyState()][c.getAniIndex()], (int) c.getHitbox().x - xLvlOffset - CRABBY_DRAWOFFSET_X + c.flipX(), (int) c.getHitbox().y - CRABBY_DRAWOFFSET_Y,
                         CRABBY_WIDTH * c.flipW(), CRABBY_HEIGHT, null);
-//				c.drawHitbox(g, xLvlOffset);
-//				c.drawAttackBox(g, xLvlOffset);
-
             }
-
     }
 
     public void checkEnemyHit(Rectangle2D.Float attackBox) {
