@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="multi levels added">
+    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="code cleanup">
+      <change afterPath="$PROJECT_DIR$/res/objects_sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/potions_sprites.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/GameContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/GameObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/ObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/Potion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Crabby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/EnemyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/EnemyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lvls/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lvls/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lvls/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Statemethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Statemethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +88,7 @@
       <workItem from="1668443746327" duration="11842000" />
       <workItem from="1668563946004" duration="5604000" />
       <workItem from="1668656355849" duration="94673000" />
-      <workItem from="1669069434091" duration="6205000" />
+      <workItem from="1669069434091" duration="12811000" />
     </task>
     <task id="LOCAL-00001" summary="Initial game construction">
       <created>1668045193305</created>
@@ -289,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669069105773</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="code cleanup">
+      <created>1669089571015</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669089571015</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Animate sprites" />
     <MESSAGE value="Create running animation state controls" />
     <MESSAGE value="Update game loop" />
     <MESSAGE value="Create player class and update game loop" />
@@ -344,6 +361,7 @@
     <MESSAGE value="combat system, game over system" />
     <MESSAGE value="Creational of multiple levels and level completed options" />
     <MESSAGE value="Bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
+    <MESSAGE value="code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
   </component>
 </project>

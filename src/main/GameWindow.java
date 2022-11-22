@@ -1,6 +1,6 @@
 package main;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 
@@ -8,6 +8,7 @@ public class GameWindow {
     private JFrame jframe;
 
     public GameWindow(GamePanel gamePanel) {
+
         jframe = new JFrame();
 
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,6 +27,7 @@ public class GameWindow {
 
             @Override
             public void windowGainedFocus(WindowEvent e) {
+                // TODO Auto-generated method stub
             }
         });
     }

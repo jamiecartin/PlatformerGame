@@ -12,18 +12,18 @@ import entities.EnemyHandler;
 import entities.Player;
 import levels.LevelHandler;
 import main.Game;
+import objects.ObjectHandler;
 import ui.GameOverOverlay;
 import ui.LevelCompletedOverlay;
 import ui.PauseOverlay;
 import utils.LoadSave;
 import static utils.Constants.Environment.*;
 
-import static main.Game.SCALE;
-
 public class Playing extends State implements Statemethods {
     private Player player;
     private LevelHandler levelHandler;
     private EnemyHandler enemyHandler;
+    private ObjectHandler objectHandler;
     private PauseOverlay pauseOverlay;
     private GameOverOverlay gameOverOverlay;
     private LevelCompletedOverlay levelCompletedOverlay;
@@ -73,6 +73,7 @@ public class Playing extends State implements Statemethods {
     private void initClasses() {
         levelHandler = new LevelHandler(game);
         enemyHandler = new EnemyHandler(this);
+        objectHandler = new ObjectHandler(this);
 
         player = new Player(200, 200, (int) (64 * Game.SCALE), (int) (40 * Game.SCALE), this);
         player.loadLvlData(levelHandler.getCurrentLevel().getLevelData());
@@ -91,6 +92,7 @@ public class Playing extends State implements Statemethods {
             levelCompletedOverlay.update();
         } else if (!gameOver) {
             levelHandler.update();
+            objectHandler.update();
             player.update();
             enemyHandler.update(levelHandler.getCurrentLevel().getLevelData(), player);
             checkCloseToBorder();
@@ -121,6 +123,7 @@ public class Playing extends State implements Statemethods {
         levelHandler.draw(g, xLvlOffset);
         player.render(g, xLvlOffset);
         enemyHandler.draw(g, xLvlOffset);
+        objectHandler.draw(g, xLvlOffset);
 
         if (paused) {
             g.setColor(new Color(0, 0, 0, 150));
@@ -259,6 +262,10 @@ public class Playing extends State implements Statemethods {
 
     public EnemyHandler getEnemyManager() {
         return enemyHandler;
+    }
+
+    public ObjectHandler getObjectHandler() {
+        return objectHandler;
     }
 
 }

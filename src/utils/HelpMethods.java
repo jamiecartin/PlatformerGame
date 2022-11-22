@@ -134,7 +134,7 @@ public class HelpMethods {
                 if (value == 100)
                     return new Point(i * Game.TILES_SIZE, j * Game.TILES_SIZE);
             }
-        return new Point(1 * Game.TILES_SIZE, 1 * Game.TILES_SIZE);
+        return new Point( Game.TILES_SIZE, Game.TILES_SIZE);
     }
 
 }
