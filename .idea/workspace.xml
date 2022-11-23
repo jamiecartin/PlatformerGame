@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="code cleanup">
-      <change afterPath="$PROJECT_DIR$/res/objects_sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/potions_sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/GameContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/ObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/Potion.java" afterDir="false" />
+    <list default="true" id="ddbca883-30fb-4aa4-8b4a-60b36c5bbfa0" name="Changes" comment="Object handler and intro of objs">
+      <change afterPath="$PROJECT_DIR$/res/ball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/cannon_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/death_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/exclamation_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/game_completed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/grass_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/lvls/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/lvls/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/options_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/pinkstar_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/question_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/rain_particle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/shark_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/trap_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tree_one_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tree_two_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/water.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/water_atlas_animation.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/background_menu.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/res/lvls/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/lvls/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/lvls/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/lvls/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player_sprites.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player_sprites.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamestates/Statemethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Statemethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/LevelHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/LevelHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/GameContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Potion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HelpMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
     </list>
@@ -72,8 +89,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/res/lvls" />
       <recent name="$PROJECT_DIR$/res" />
+      <recent name="$PROJECT_DIR$/res/lvls" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -88,7 +105,7 @@
       <workItem from="1668443746327" duration="11842000" />
       <workItem from="1668563946004" duration="5604000" />
       <workItem from="1668656355849" duration="94673000" />
-      <workItem from="1669069434091" duration="12811000" />
+      <workItem from="1669069434091" duration="23566000" />
     </task>
     <task id="LOCAL-00001" summary="Initial game construction">
       <created>1668045193305</created>
@@ -307,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669089571015</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Object handler and intro of objs">
+      <created>1669097405302</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669097405302</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create running animation state controls" />
     <MESSAGE value="Update game loop" />
     <MESSAGE value="Create player class and update game loop" />
     <MESSAGE value="bug fix" />
@@ -362,6 +385,17 @@
     <MESSAGE value="Creational of multiple levels and level completed options" />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
+    <MESSAGE value="Object handler and intro of objs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Object handler and intro of objs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

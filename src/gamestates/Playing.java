@@ -64,6 +64,7 @@ public class Playing extends State implements Statemethods {
 
     private void loadStartLevel() {
         enemyHandler.loadEnemies(levelHandler.getCurrentLevel());
+        objectHandler.loadObjects(levelHandler.getCurrentLevel());
     }
 
     private void calcLvlOffset() {
@@ -149,14 +150,23 @@ public class Playing extends State implements Statemethods {
         lvlCompleted = false;
         player.resetAll();
         enemyHandler.resetAllEnemies();
+        objectHandler.resetAllObjs();
     }
 
     public void setGameOver(boolean gameOver) {
         this.gameOver = gameOver;
     }
 
+    public void checkObjHit(Rectangle2D.Float attackBox) {
+        objectHandler.checkObjHit(attackBox);
+    }
+
     public void checkEnemyHit(Rectangle2D.Float attackBox) {
         enemyHandler.checkEnemyHit(attackBox);
+    }
+
+    public void checkPotionTouched(Rectangle2D.Float hitbox) {
+        objectHandler.checkObjTouched(hitbox);
     }
 
     @Override
