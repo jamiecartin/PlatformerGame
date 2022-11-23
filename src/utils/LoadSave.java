@@ -1,12 +1,13 @@
 package utils;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
+
+import javax.imageio.ImageIO;
 
 public class LoadSave {
 
@@ -27,7 +28,8 @@ public class LoadSave {
     public static final String COMPLETED_IMG = "completed_sprite.png";
     public static final String POTION_ATLAS = "potions_sprites.png";
     public static final String CONTAINER_ATLAS = "objects_sprites.png";
-    public static final String BALL = "ball.png";
+    public static final String TRAP_ATLAS = "trap_atlas.png";
+  /*  public static final String BALL = "ball.png";
     public static final String CANNON_ATLAS = "cannon_atlas.png";
     public static final String DEATH_SCREEN = "death_screen.png";
     public static final String EXCLAMATION_ATLAS = "exclamation_atlas.png";
@@ -43,8 +45,7 @@ public class LoadSave {
     public static final String TREE_ONE_ATLAS = "tree_one_atlas.png";
     public static final String TREE_TWO_ATLAS = "tree_two_atlas.png";
     public static final String WATER = "water.png";
-    public static final String TRAP_ATLAS = "trap_atlas.png";
-    public static final String WATER_ATLAS_ANI = "water_atlas_animation.png";
+    public static final String WATER_ATLAS_ANI = "water_atlas_animation.png";*/
 
     public static BufferedImage GetSpriteAtlas(String fileName) {
         BufferedImage img = null;
@@ -81,7 +82,6 @@ public class LoadSave {
             for (int j = 0; j < files.length; j++) {
                 if (files[j].getName().equals((i + 1) + ".png"))
                     filesSorted[i] = files[j];
-
             }
 
         BufferedImage[] imgs = new BufferedImage[filesSorted.length];
@@ -92,7 +92,6 @@ public class LoadSave {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         return imgs;
     }
 }
